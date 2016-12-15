@@ -1,6 +1,9 @@
 <?php
 return array(
-		'DSN' => 'mysql:host=localhost;dbname=test',
-		'USERNAME' => 'root',
-		'PASSWORD' => '147258369'
+    'database_type' => 'mysql',
+    'database_name' => 'test',
+    'server' => 'localhost',
+    'username' => 'root',
+    'password' => '147258369',
+    'charset' => 'utf8'
 );

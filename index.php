@@ -12,6 +12,7 @@
  define('MODULE','app');
  
  define('DEBUG',true);
+
  
  if(DEBUG) {
 	 ini_set('display_errors','On');
