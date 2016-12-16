@@ -1,4 +1,4 @@
-<html>
-<h1>视图文件</h1>
-<h3><?php echo $data;?></h3>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+{{data}}
+{% endblock %}

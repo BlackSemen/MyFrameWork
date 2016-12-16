@@ -48,8 +48,13 @@ class MyFW{
 	public function display($path){
 		$file = APP.'/view/'.$path;
 		if(is_file($file)) {
-			extract($this->assign);
-			include $file;
+			\Twig_Autoloader::register();
+			$loader = new \Twig_Loader_Filesystem(APP.'./view');
+			$twig = new \Twig_Environment($loader, array(
+				'cache' => MyFW.'/log/twig',
+			));
+			$template = $twig->load('index.html');
+			$template->display($this->assign?$this->assign:'');
 		}
 	}
 }
